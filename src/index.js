@@ -1,16 +1,9 @@
-const express = require('express')
-require('./db/mongoose')
-const userRouter = require('./routers/user')
-const taskRouter = require('./routers/task')
-
-const app = express()
+const app = require('./app')
 const port = process.env.PORT
-
-app.use(express.json())
-app.use(userRouter)
-app.use(taskRouter)
-
 
 app.listen(port, () => {
     console.log(`Server is up on ${port}`)
 })
+
+// All other code removed because it was moved to app.js
+// In order to run the code in the same way as the previous state, require the app.js file that was created, then deleted duplicate lines.
